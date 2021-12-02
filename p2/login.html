@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CodeMy!</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<script src="js/login.js"></script>
+	<style>
+		.data {
+			position: relative;
+			left: 55.5rem;
+			padding-top: 0.5rem;
+			color: white;
+		}
+	</style>
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Tenth navbar example">
+		<div class="container-fluid">
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample08"
+				aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse justify-content-md-left" id="navbarsExample08">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="index.html">CodeMy!</a>
+					</li>
+
+					<p class="data">
+						<script>
+							var data = new Date();
+							var dia = String(data.getDate()).padStart(2, '0');
+							var mes = String(data.getMonth() + 1).padStart(2, '0');
+							var ano = data.getFullYear();
+
+							if (mes == 1) {
+								mesExtenso = ('Janeiro')
+							}
+							else if (mes == 2) {
+								mesExtenso = ('Fevereiro')
+							}
+							else if (mes == 3) {
+								mesExtenso = ('Março')
+							}
+							else if (mes == 4) {
+								mesExtenso = ('Abril')
+							}
+							else if (mes == 5) {
+								mesExtenso = ('Maio')
+							}
+							else if (mes == 6) {
+								mesExtenso = ('Junho')
+							}
+							else if (mes == 7) {
+								mesExtenso = ('Julho')
+							}
+							else if (mes == 8) {
+								mesExtenso = ('Agosto')
+							}
+							else if (mes == 9) {
+								mesExtenso = ('Setembro')
+							}
+							else if (mes == 10) {
+								mesExtenso = ('Outubro')
+							}
+							else if (mes == 11) {
+								mesExtenso = ('Novembro')
+							}
+							else if (mes == 12) {
+								mesExtenso = ('Dezembro')
+							}
+
+							dataAtual = 'Jundiaí, ' + dia + ' de ' + mesExtenso + ' de ' + ano;
+							document.write(dataAtual);
+						</script>
+					</p>
+
+			</div>
+		</div>
+	</nav>
+
+	<div class="modal-dialog" role="document">
+		<div class="modal-content rounded-5 shadow">
+			<div class="modal-header p-5 pb-4 border-bottom-0">
+				<h2 class="fw-bold mb-0">Faça seu Login!</h2>
+			</div>
+
+			<div class="modal-body p-5 pt-0">
+				<form class="login-form" name="dados" method="post" action="" onsubmit="return Login(event)">
+					<div class="form-floating mb-3">
+						<input type="email" class="form-control rounded-4" id="email" placeholder="name@example.com"
+							name="email" required>
+						<label for="floatingInput">E-mail</label>
+					</div>
+					<div class="form-floating mb-3">
+						<input type="password" class="form-control rounded-4" id="password" placeholder="Password"
+							name="password" required>
+						<label for="password">Senha</label>
+					</div>
+					<button class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit" name="loginButton"
+						value="Entrar">Entrar</button>
+					<small class="text-muted">Entre usado o seu e-mail da fatec e senha == 1234</small>
+					<hr class="my-4">
+					<h2 class="fs-5 fw-bold mb-3">Inscrever-se</h2>
+
+					<button type="button" class="w-100 py-2 mb-2 btn btn-outline-dark " data-bs-toggle="modal"
+						data-bs-target="#exampleModal" onclick="registrar()">Registrar!</button>
+				</form>
+
+			</div>
+		</div>
+	</div>
+
+	<form name="registro-form" action="ok.html" onsubmit="return Login(event)">
+		<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Registro</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body" id="modal-bodyy">
+						<div class="form-floating mb-3">
+							<input type="text" class="form-control rounded-4" id="floatingInput"
+								placeholder="name@example.com" name="nome" required>
+							<label for="floatingInput">Nome</label>
+						</div>
+
+						<div class="form-floating mb-3">
+							<input type="email" class="form-control rounded-4" id="floatingInput"
+								placeholder="name@example.com" name="email" required>
+							<label for="floatingInput">Email address</label>
+						</div>
+
+						<div class="form-floating mb-3">
+							<input type="password" class="form-control rounded-4" id="floatingPassword"
+								placeholder="Password" name="senha" required>
+							<label for="floatingPassword">Password</label>
+						</div>
+					</div>
+
+
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+						<button type="submit" class="btn btn-primary" name="cadastroButton"
+							value="Cadastrar">Cadastrar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+
+	<script src="./js/bootstrap.bundle.min.js"
+		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+		crossorigin="anonymous"></script>
+
+</body>
+
+</html>

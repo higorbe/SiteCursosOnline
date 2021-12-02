@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+	<meta name="generator" content="Hugo 0.88.1">
+	<title>contato</title>
+
+	<link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/pricing/">
+	<link href="css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/attr.css" rel="stylesheet">
+	<script src="js/func.js"></script>
+	<script src="./js/bootstrap.bundle.min.js"
+		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+		crossorigin="anonymous"></script>
+	<link href="css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<script src="js/valida_assinatura.js"></script>
+	<script type="text/javascript" src="js/leitura.js"></script>
+
+	<script src="./js/bootstrap.bundle.min.js"
+		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+		crossorigin="anonymous"></script>
+
+		<style>
+			.form-control:disabled, .form-control[readonly] {
+
+				margin: 5px;
+			}
+
+		</style>
+
+</head>
+<header>
+	<!-- Fixed navbar -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Tenth navbar example">
+		<div class="container-fluid">
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample08"
+				aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse justify-content-md-left" id="navbarsExample08">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="index.html">CodeMy!</a>
+					</li>
+
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="index.html">Início</a>
+					</li>
+
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="assinatura.html">Assinatura</a>
+					</li>
+
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="contato.html">Contato</a>
+					</li>
+
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="login.html">Sair</a>
+					</li>
+
+				</ul>
+
+				<p class="data">
+					<script>
+						var data = new Date();
+						var dia = String(data.getDate()).padStart(2, '0');
+						var mes = String(data.getMonth() + 1).padStart(2, '0');
+						var ano = data.getFullYear();
+
+						if (mes == 1) {
+							mesExtenso = ('Janeiro')
+						}
+						else if (mes == 2) {
+							mesExtenso = ('Fevereiro')
+						}
+						else if (mes == 3) {
+							mesExtenso = ('Março')
+						}
+						else if (mes == 4) {
+							mesExtenso = ('Abril')
+						}
+						else if (mes == 5) {
+							mesExtenso = ('Maio')
+						}
+						else if (mes == 6) {
+							mesExtenso = ('Junho')
+						}
+						else if (mes == 7) {
+							mesExtenso = ('Julho')
+						}
+						else if (mes == 8) {
+							mesExtenso = ('Agosto')
+						}
+						else if (mes == 9) {
+							mesExtenso = ('Setembro')
+						}
+						else if (mes == 10) {
+							mesExtenso = ('Outubro')
+						}
+						else if (mes == 11) {
+							mesExtenso = ('Novembro')
+						}
+						else if (mes == 12) {
+							mesExtenso = ('Dezembro')
+						}
+
+						dataAtual = 'Jundiaí, ' + dia + ' de ' + mesExtenso + ' de ' + ano;
+						document.write(dataAtual);
+					</script>
+				</p>
+
+			</div>
+		</div>
+	</nav>
+
+
+	<script type="text/javascript">
+
+		// Pega os valores enviados da página index e coloca nas váriáveis curso e preco
+		var curso = queryString("curso");
+		var preco = queryString("preco");
+
+	</script>
+</header>
+
+<body>
+	<main class="flex-shrink-0">
+		<div class="container">
+
+			<center><h1 class="fw-light">Email foi enviado!!!</h1></center>
+
+			<script type="text/javascript">
+				var nome = queryString("nome");
+				var email = queryString("email");
+				var descricao = queryString("descricao");
+			</script>
+
+
+			<input input disabled type="text" class="form-control" name="nome" id="nome">
+			<script type="text/javascript">
+				document.getElementById('nome').value = nome;
+			</script>
+
+			<input input disabled type="text" class="form-control" name="email" id="email">
+			<script type="text/javascript">
+				document.getElementById('email').value = email;
+			</script>
+
+
+			<textarea disabled class="form-control" name="descricao" id="descricao"></textarea>
+			<script type="text/javascript">
+				document.getElementById('descricao').value = descricao;
+			</script>
+
+		</div>
+		</div>
+		</div>
+		</div>
+	</main>
+</body>
+
+</html>
+<script type="text/javascript" src="js/leitura.js"></script>

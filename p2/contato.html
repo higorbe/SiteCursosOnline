@@ -1,0 +1,196 @@
+
+<!doctype html>
+<html lang="pt-br" class="h-100">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.88.1">
+  <title>Sticky Footer Navbar Template · Bootstrap v5.1</title>
+
+  <!-- Bootstrap CSS -->
+  <!--<link href="css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">-->
+
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="./js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script src="js/validaEmail.js"></script>
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" href="/docs/5.1/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+  <link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="manifest" href="/docs/5.1/assets/img/favicons/manifest.json">
+  <link rel="mask-icon" href="/docs/5.1/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
+  <link rel="icon" href="/docs/5.1/assets/img/favicons/favicon.ico">
+  <meta name="theme-color" content="#7952b3">
+  
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    .data{
+    position: relative;
+    left: 39.5rem;
+    padding-top: 0.5rem;
+    color: white;
+  }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+
+
+  <!-- Custom styles for this template -->
+  <link href="sticky-footer-navbar.css" rel="stylesheet">
+</head>
+<body class="d-flex flex-column h-100">
+
+  <header>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Tenth navbar example">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-md-left" id="navbarsExample08">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">CodeMy!</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Início</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="assinatura.html">Assinatura</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="contato.html">Contato</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="login.html">Sair</a>
+            </li>
+          </ul>
+
+          <p class="data">
+            <script>
+              var data = new Date();
+              var dia = String(data.getDate()).padStart(2, '0');
+              var mes = String(data.getMonth() + 1).padStart(2, '0');
+              var ano = data.getFullYear();
+    
+              if(mes==1) {
+                mesExtenso=('Janeiro')
+              }
+              else if(mes==2) {
+                mesExtenso=('Fevereiro')
+              }
+              else if(mes==3) {
+                mesExtenso=('Março')
+              }
+              else if(mes==4) {
+                mesExtenso=('Abril')
+              }
+              else if(mes==5) {
+                mesExtenso=('Maio')
+              }
+              else if(mes==6) {
+                mesExtenso=('Junho')
+              }
+              else if(mes==7) {
+                mesExtenso=('Julho')
+              }
+              else if(mes==8) {
+                mesExtenso=('Agosto')
+              }
+              else if(mes==9) {
+                mesExtenso=('Setembro')
+              }
+              else if(mes==10) {
+                mesExtenso=('Outubro')
+              }
+              else if(mes==11) {
+                mesExtenso=('Novembro')
+              }
+              else if(mes==12) {
+                mesExtenso=('Dezembro')
+              }
+    
+              dataAtual ='Jundiaí, ' + dia + ' de ' + mesExtenso + ' de ' + ano;
+              document.write(dataAtual);
+            </script>
+            </p>
+
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Begin page content -->
+  <main class="flex-shrink-0">
+    <div class="container" >
+
+      <h1 class="mt-5" align="center">Entre em contato conosco:</h1>
+
+
+      <form method="GET" name="dados" action="validacontato.html" onsubmit="return validarEmail(this)">
+        <div class="form-group">
+          <label for="nome">Nome:</label>
+          <input type="text" class="form-control" name="nome" id="nome" placeholder="Nome" size="40" maxlength="50">
+        </div>
+
+
+
+        <div class="form-group">
+          <label for="email">E-mail:</label>
+          <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="Endereço de email" size="30" maxlength="50">
+        </div>
+
+        
+        <div class="form-group">
+          <label for="descricao">Descrição:</label>
+          <textarea class="form-control" name="descricao" id="descricao" rows="3" maxlength="255"></textarea>
+        </div>
+        <br>
+        <!-- com problema 
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="checkConcordo">
+          <label class="form-check-label" for="checkConcordo">Estou ciente que o tempo de resposta é de 2 a 3 dias úteis.</label>
+        </div>-->
+        <p>
+          <input type="submit" class="btn btn-primary" name="enviar" value="ENVIAR">
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="reset" class="btn btn-primary" name="limpar" value="LIMPAR">
+        </p>
+      </form>
+    </main>
+
+    <footer class="footer mt-auto py-3 bg-light">
+      <div class="container">
+        <span class="text-muted">CodeMy, melhor academia de ensino a distância.</span>
+        <span class="text-muted" style="margin-left: 15%;">Higor Bernardes da Silva |
+          João Paulo Cordeiro da Silva |
+          Myrelle Sales Santos - 2ADS</span>
+      </div>
+    </footer>
+
+
+    <script src="js/bootstrap.bundle.min.js.map" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+
+  </body>
+  </html>

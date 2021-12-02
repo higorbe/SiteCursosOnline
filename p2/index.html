@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link href="css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/attr.css" rel="stylesheet">
+  <script src="js/func.js"></script>
+  <script src="./js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+  <title>CodeMy!</title>
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Tenth navbar example">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample08"
+        aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-md-left" id="navbarsExample08">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">CodeMy!</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Início</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="assinatura.html">Assinatura</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="contato.html">Contato</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="login.html">Sair</a>
+          </li>
+
+          </li>
+        </ul>
+
+        <p class="data">
+          <script>
+            var data = new Date();
+            var dia = String(data.getDate()).padStart(2, '0');
+            var mes = String(data.getMonth() + 1).padStart(2, '0');
+            var ano = data.getFullYear();
+
+            if (mes == 1) {
+              mesExtenso = ('Janeiro')
+            }
+            else if (mes == 2) {
+              mesExtenso = ('Fevereiro')
+            }
+            else if (mes == 3) {
+              mesExtenso = ('Março')
+            }
+            else if (mes == 4) {
+              mesExtenso = ('Abril')
+            }
+            else if (mes == 5) {
+              mesExtenso = ('Maio')
+            }
+            else if (mes == 6) {
+              mesExtenso = ('Junho')
+            }
+            else if (mes == 7) {
+              mesExtenso = ('Julho')
+            }
+            else if (mes == 8) {
+              mesExtenso = ('Agosto')
+            }
+            else if (mes == 9) {
+              mesExtenso = ('Setembro')
+            }
+            else if (mes == 10) {
+              mesExtenso = ('Outubro')
+            }
+            else if (mes == 11) {
+              mesExtenso = ('Novembro')
+            }
+            else if (mes == 12) {
+              mesExtenso = ('Dezembro')
+            }
+
+            dataAtual = 'Jundiaí, ' + dia + ' de ' + mesExtenso + ' de ' + ano;
+            document.write(dataAtual);
+          </script>
+        </p>
+
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- GIRD -->
+
+  <main>
+
+    <section class="py-5 text-center container">
+      <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+          <h1 class="fw-light">Bem-vindos a CodeMy!!</h1>
+          <p class="lead text-muted-black">Aqui você encontra os melhores cursos de Tecnologia feitos especialmente para
+            você!</p>
+          <p>
+            <a href="assinatura.html#oferta" class="btn btn-primary my-2">Confira aqui!</a>
+            <a href="contato.html" class="btn btn-secondary my-2">Entrar em contato</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <form name="dados" action="assinatura.html" onsubmit="return this">
+      <div class="album py-5 bg-light">
+        <div class="container">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div class="col" onmouseover="estacoes('1')" onmouseout="limpa1()" id="curso">
+              <div class="card shadow-sm1">
+                <img src="imgs/01.png" class="bd-placeholder-img card-img-top" width="100%" height="225"
+                  xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <rect width="100%" height="100%" fill="#55595c" />
+                <center>
+                  <label name="curso" id="curso">
+                    <text x="50%" y="50%" fill="#eceeef" dy=".3em">Curso de programação</text>
+
+                      <!-- tipo de input hidden é invisível -->
+                      <input  type="hidden" name="curso" id="curso" value="Primeiro Curso de programacao para iniciantes">
+                      <input type="hidden" name="preco" id="preco" value="39.99">
+
+                    </text>
+                  </label>
+                </center>
+                </img>
+                <!--  </svg> -->
+                <div class="card-body">
+                  <p class="card-text"></p>
+                  <center>
+                    <div id="status1"></div>
+                  </center>
+                  <div class="d-flex justify-content-between align-items-center">
+
+                    <div class="btn-group">
+                      <!-- <button type="button" class="btn btn-sm btn-outline-secondary"><button> -->
+                      <input type="submit" class="btn btn-sm btn-outline-secondary" value="Comprar">
+
+                    </div>
+                    <small class="text-muted" name="preco" id="preco">R$ 39,99</small>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+    </form>
+
+
+    <form name="dados" action="assinatura.html" onsubmit="return validar(this)">
+      <div class="col" onmouseover="estacoes('2')" onmouseout="limpa2()" id="curso">
+        <div class="card shadow-sm">
+          <img src="imgs/2.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225"
+            xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
+
+          <rect width="100%" height="100%" fill="#55595c" />
+          <center>
+            <text x="50%" y="50%" fill="#eceeef" dy=".3em" id="prog1">Curso de programação</text>
+          </center>
+
+          <input  type="hidden" name="curso" id="curso" value="Segundo Curso de programacao para iniciantes">
+          <input type="hidden" name="preco" id="preco" value="59.99">
+
+          </img>
+          <!--  </svg> -->
+          <div class="card-body">
+            <p class="card-text"></p>
+            <center>
+              <div id="status2"></div>
+            </center>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <!-- <button type="button" class="btn btn-sm btn-outline-secondary"><button> -->
+                <input type="submit" class="btn btn-sm btn-outline-secondary" value="Comprar">
+                
+              </div>
+              <small class="text-muted">R$ 59,99</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <form name="dados" action="assinatura.html" onsubmit="return validar(this)">
+      <div class="col" onmouseover="estacoes('3')" onmouseout="limpa3()" id="curso">
+        <div class="card shadow-sm">
+          <img src="imgs/3.png" class="bd-placeholder-img card-img-top" width="100%" height="225"
+            xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
+
+          <rect width="100%" height="100%" fill="#55595c" />
+          <center>
+            <text x="50%" y="50%" fill="#eceeef" dy=".3em">Curso de programação</text>
+          </center>
+          
+
+          <input  type="hidden" name="curso" id="curso" value="Curso de programacao para criancas e adolescentes com Scratch">
+          <input type="hidden" name="preco" id="preco" value="49.99">
+          </img>
+          <!--  </svg> -->
+          <div class="card-body">
+            <p class="card-text"></p>
+            <center>
+              <div id="status3"></div>
+            </center>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <!-- <button type="button" class="btn btn-sm btn-outline-secondary"><button> -->
+                <input type="submit" class="btn btn-sm btn-outline-secondary" value="Comprar">
+              </div>
+              <small class="text-muted">R$ 49,99</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <form name="dados" action="assinatura.html" onsubmit="return validar(this)">
+      <div class="col" onmouseover="estacoes('4')" onmouseout="limpa4()" id="curso">
+        <div class="card shadow-sm">
+          <img src="imgs/4.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225"
+            xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
+
+          <rect width="100%" height="100%" fill="#55595c" />
+          <center>
+            <text x="50%" y="50%" fill="#eceeef" dy=".3em">Curso de programação</text>
+          </center>
+
+
+          <input  type="hidden" name="curso" id="curso" value="Curso de programacao avancado">
+          <input type="hidden" name="preco" id="preco" value="69.99">
+
+
+          </img>
+          <!--  </svg> -->
+          <div class="card-body">
+            <p class="card-text"></p>
+            <center>
+              <div id="status4"></div>
+            </center>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <!-- <button type="button" class="btn btn-sm btn-outline-secondary"><button> -->
+                <input type="submit" class="btn btn-sm btn-outline-secondary" value="Comprar">
+              </div>
+              <small class="text-muted">R$ 69,99</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <form name="dados" action="assinatura.html" onsubmit="return validar(this)">
+      <div class="col" onmouseover="estacoes('5')" onmouseout="limpa5()" id="curso">
+        <div class="card shadow-sm">
+          <img src="imgs/5.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225"
+            xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
+
+          <rect width="100%" height="100%" fill="#55595c" />
+          <center>
+            <text x="50%" y="50%" fill="#eceeef" dy=".3em">Curso de lógica de programação</text>
+          </center>
+
+          <input  type="hidden" name="curso" id="curso" value="Curso de logica de programacao parte 1">
+          <input type="hidden" name="preco" id="preco" value="39.99">
+
+          </img>
+          <!--  </svg> -->
+          <div class="card-body">
+            <p class="card-text"></p>
+            <center>
+              <div id="status5"></div>
+            </center>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <!-- <button type="button" class="btn btn-sm btn-outline-secondary"><button> -->
+                <input type="submit" class="btn btn-sm btn-outline-secondary" value="Comprar">
+              </div>
+              <small class="text-muted">R$ 39,99</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <form name="dados" action="assinatura.html" onsubmit="return validar(this)">
+
+      <div class="col" onmouseover="estacoes('6')" onmouseout="limpa6()" id="curso">
+        <div class="card shadow-sm">
+          <img src="imgs/6.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225"
+            xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
+
+          <rect width="100%" height="100%" fill="#55595c" />
+          <center>
+            <text x="50%" y="50%" fill="#eceeef" dy=".3em">Curso de lógica de programação</text>
+          </center>
+
+          <input  type="hidden" name="curso" id="curso" value="Curso de logica de programacao parte 2">
+          <input type="hidden" name="preco" id="preco" value="49.99">
+          </img>
+          <!--  </svg> -->
+          <div class="card-body">
+            <p class="card-text"></p>
+            <center>
+              <div id="status6"></div>
+            </center>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <!-- <button type="button" class="btn btn-sm btn-outline-secondary"><button> -->
+                <input type="submit" class="btn btn-sm btn-outline-secondary" value="Comprar">
+              </div>
+              <small class="text-muted">R$ 49,99</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+
+    <form name="dados" action="assinatura.html" onsubmit="return validar(this)">
+      <div class="col" onmouseover="estacoes('7')" onmouseout="limpa7()" id="curso">
+        <div class="card shadow-sm">
+          <img src="imgs/7.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225"
+            xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
+
+          <rect width="100%" height="100%" fill="#55595c" />
+          <center>
+            <text x="50%" y="50%" fill="#eceeef" dy=".3em">Curso de Python </text>
+          </center>
+
+          <input  type="hidden" name="curso" id="curso" value="Curso de Python completo">
+          <input type="hidden" name="preco" id="preco" value="99.99">
+          </img>
+          <!--  </svg> -->
+          <div class="card-body">
+            <p class="card-text"></p>
+            <center>
+              <div id="status7"></div>
+            </center>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <!-- <button type="button" class="btn btn-sm btn-outline-secondary"><button> -->
+                <input type="submit" class="btn btn-sm btn-outline-secondary" value="Comprar">
+              </div>
+              <small class="text-muted">R$ 99,99</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <form name="dados" action="assinatura.html" onsubmit="return validar(this)">
+      <div class="col" onmouseover="estacoes('8')" onmouseout="limpa8()" id="curso">
+        <div class="card shadow-sm">
+          <img src="imgs/8.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225"
+            xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
+
+          <rect width="100%" height="100%" fill="#55595c" />
+          <center>
+            <text x="50%" y="50%" fill="#eceeef" dy=".3em">Curso de JAVA</text>
+          </center>
+
+          <input  type="hidden" name="curso" id="curso" value="Curso de JAVA completo">
+          <input type="hidden" name="preco" id="preco" value="99.99">
+          </img>
+          <!--  </svg> -->
+          <div class="card-body">
+            <p class="card-text"></p>
+            <center>
+              <div id="status8"></div>
+            </center>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <!-- <button type="button" class="btn btn-sm btn-outline-secondary"><button> -->
+                  <input type="submit" class="btn btn-sm btn-outline-secondary" value="Comprar">
+              </div>
+              <small class="text-muted">R$ 99,99</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <form name="dados" action="assinatura.html" onsubmit="return validar(this)">
+      <div class="col" onmouseover="estacoes('9')" onmouseout="limpa9()" id="curso">
+        <div class="card shadow-sm">
+          <img src="imgs/9.png" class="bd-placeholder-img card-img-top" width="100%" height="225"
+            xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
+
+          <rect width="100%" height="100%" fill="#55595c" />
+          <center>
+            <text x="50%" y="50%" fill="#eceeef" dy=".3em">Curso de PHP</text>
+          </center>
+
+          <input  type="hidden" name="curso" id="curso" value="Curso de PHP completo">
+          <input type="hidden" name="preco" id="preco" value="99.99">
+
+
+          </img>
+          <!--  </svg> -->
+          <div class="card-body">
+            <p class="card-text"></p>
+            <center>
+              <div id="status9"></div>
+            </center>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <!-- <button type="button" class="btn btn-sm btn-outline-secondary"><button> -->
+                  <input type="submit" class="btn btn-sm btn-outline-secondary" value="Comprar">
+              </div>
+              <small class="text-muted">R$ 99,99</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </main>
+
+  <footer class="footer mt-auto py-3">
+    <div class="container">
+      <span style="color: white;">CodeMy, melhor academia de ensino a distância.
+        
+        <span style="margin-left: 15%;">Higor Bernardes da Silva |
+        João Paulo Cordeiro da Silva |
+        Myrelle Sales Santos - 2ADS</span>
+      </span>
+    </div>
+  </footer>
+
+  <script src="js/bootstrap.bundle.min.js.map"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
